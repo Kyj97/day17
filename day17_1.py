@@ -1,12 +1,12 @@
 def is_queue_empty():
-    global SIZE, queue, front, rear
+    global SIZE, d_array, front, rear
     if (front == rear):
         return True
     else:
         return False
 
 def de_queue():
-    global SIZE, queue, front, rear
+    global SIZE, d_array, front, rear
     if (is_queue_empty()):
         print(f'대기 줄 상태 : {queue}\n식당 영업 종료!')
         return None
@@ -24,13 +24,13 @@ def de_queue():
 
 
 SIZE = 5
-queue = ["정국", "뷔", "지민", "진", "슈가"]
+d_array = ["정국", "뷔", "지민", "진", "슈가"]
 front = -1
 rear = 4
 i = 0
 
 while True:
-    print(f'대기 줄 상태 : {queue}')
+    print(f'대기 줄 상태 : {d_array}')
     print(f'{de_queue()} 님 식당에 들어감')
     i = i + 1
 
